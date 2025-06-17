@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npx tsc",
+    "start:prod": "node build/index.js",
+    "start:dev": "nodemon src/index.ts"
   },
   "keywords": [],
   "author": "",
@@ -13,8 +15,12 @@
     "express": "^5.1.0"
   },
   "devDependencies": {
+    "@types/body-parser": "^1.19.6",
+    "@types/connect": "^3.4.38",
     "@types/express": "^5.0.3",
+    "@types/node": "^24.0.3",
     "nodemon": "^3.1.10",
+    "prisma": "^6.9.0",
     "typescript": "^5.8.3"
   }
 }
